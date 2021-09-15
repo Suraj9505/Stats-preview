@@ -1,0 +1,210 @@
+@import url("https://fonts.google.com/specimen/Inter");
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsl(0, 0%, 100%, .75);
+    --stat-heading: hsl(0, 0%, 100%, .6);
+}
+
+
+body{
+    background-color: var(--main-background);
+    padding: 4em 2em;
+}
+
+/* For Mobile */
+
+.card{
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    background: var(--card-background);
+    /* padding: 1em */;
+    border-radius: 8px;
+}
+
+header{
+    background: var(--accent);
+    width: 100%;
+    height: 50%;
+    border-radius: 8px 8px 0 0;
+}
+
+.card img.mobile{
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+    border-radius: 8px 8px 0 0;
+    vertical-align: bottom;
+    opacity: 0.7;
+}
+
+img.desktop{
+    display: none;
+}
+
+.card h1{
+    font-family: "Inter", sans-serif;
+    font-size: 25.5px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--main-heading);
+    padding: 1em 1em 0.5em 1em;
+}
+
+span{
+    color: var(--accent);
+}
+
+main.description{
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    word-spacing: 1px;;
+    color: var(--main-paragraph);
+    padding: 0 2em 0 2em;
+}
+
+footer{
+    display: block;
+    text-align: center;
+    padding: 2em;
+}
+
+h2{
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--main-paragraph);
+    padding: .2em;
+}
+
+h2.query{
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 10px;
+    font-family: "Lexend Deca", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--stat-heading);
+    margin-top: -2px;
+    margin-bottom: 20px;
+}
+
+div.attribution{
+        font-size: 12px;
+        color: var(--main-paragraph);
+        padding-bottom: 1em;
+        margin-left: 10px;
+        text-align: center;
+    }
+.attribution a{
+    color: var(--accent);
+}
+
+
+
+@media screen and (min-width: 375px){
+    body{
+       padding: 10em 14em;
+}
+
+    .card{
+        width: 900px;
+        height: 350px;
+    }
+    
+    header{
+        width: 50%;
+        height: 100%;
+        margin-left: 450px;
+        border-radius: 0 8px 8px 0;
+    }
+
+    img.mobile{
+        display: none;
+    }
+    
+    img.desktop{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 8px 8px 0;
+        opacity: 0.7;
+    }
+
+    .card h1{
+        font-size: 28px;
+        margin-top: -350px;
+        padding: 2em 2em .8em 1.8em;
+        width: 50%;
+        text-align: initial;
+    }      
+
+    main.description{
+        width: 50%;
+        font-size: 12px;
+        text-align: initial;
+        padding-left: 4em;
+        padding-right: 10em; 
+    }
+    
+    footer{
+        display: flex;
+        justify-content: center;
+        margin-left: -535px;
+        margin-top: 30px;
+    }
+    
+    footer h2{
+        font-size: 20px;
+        position: relative;
+        text-align: initial;
+    }
+
+    h2.temp{
+        margin-left: 45px;
+        
+    }
+    
+    h2.query{
+        margin-left: 45px;
+    }
+
+    footer h3{
+        font-size: 10px;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        margin-top: 35px;
+        letter-spacing: .1px; 
+    }
+    
+    h3.company{
+        margin-left: -48px;    
+    }
+
+    h3.temp{
+        margin-left: -40px;
+    }
+    
+    h3.query{
+        margin-left: -53px
+    }
+
+    div.attribution{
+        font-size: 15px;
+        margin-top: -15px;
+        margin-left: -485px;
+    }
+}
